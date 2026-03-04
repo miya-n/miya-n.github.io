@@ -1,0 +1,35 @@
+<nav>
+    <div class="desktop">
+        {% for item in site.data.navigation %}<a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% else %}class="not-current"{% endif %}>
+            {{ item.name }}
+        </a>
+        {% endfor %}
+    </div>
+    <div class="mobile">
+        <div style="display: flex;">
+            <a href="/" class="home-link">Miya Nour</a>
+            <a href="javascript:void(0);" id="menuButton" class="menu-inactive" onclick="toggleMenu()">
+                <img src="/assets/icons/menu.svg" alt="Toggle site menu">
+            </a>
+        </div>
+        <div id="mobileLinks">
+            {% for item in site.data.navigation %}{% if forloop.first %}{% continue %}{% endif %}<a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% else %}class="not-current"{% endif %}>
+                {{ item.name }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</nav>
+<script>
+const links = document.getElementById("mobileLinks");
+const menuButton = document.getElementById("menuButton");
+function toggleMenu() {
+    if (links.style.display === "grid") {
+        links.style.display = "none";
+        menuButton.className = "menu-inactive";
+    } else {
+        links.style.display = "grid";
+        menuButton.className = "menu-active";
+    }
+} 
+</script>

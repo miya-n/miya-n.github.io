@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+        {% if page.preload-images %}{% for image in page.preload-images %}<link rel="preload" href="{{image}}" as="image" />
+        {% endfor %}{% endif %}
+    </head>
+    <body>
+        {% include navigation.html %}
+        <div class="body-text">
+            {{ content }}
+        </div>
+        {% include footer.html %}
+    </body>
+</html>

@@ -1,0 +1,7 @@
+<footer class="footer">
+    <p>
+        <a href="mailto:miya.nour.apps@gmail.com">miya.nour.apps@gmail.com</a>
+        <br>
+        {% if page.description %}{{- page.description | escape -}}{% else %}{{- site.description | escape -}}{% endif %}
+    </p>
+</footer>

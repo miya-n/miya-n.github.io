@@ -1,0 +1,12 @@
+- name: Home
+  link: /
+- name: Android APK Download
+  link: /downloads/
+- name: Contact
+  link: /contact/
+- name: Donate
+  link: /donate/
+- name: TypingTalk Privacy (Android)
+  link: /typingtalk-privacy-android/
+- name: TypingTalk Privacy (iOS)
+  link: /typingtalk-privacy-ios/

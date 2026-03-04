@@ -1,0 +1,22 @@
+---
+---
+@import "main";
+@font-face {
+    font-family: "Manjari";
+    src: 
+        url("../fonts/Manjari-Regular-subset.woff2"), 
+        url("../fonts/Manjari-Regular-subset.zopfli.woff"), 
+        url("../fonts/Manjari-Regular-subset.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Manjari";
+    src: 
+        url("../fonts/Manjari-Bold-subset.woff2"), 
+        url("../fonts/Manjari-Bold-subset.zopfli.woff"), 
+        url("../fonts/Manjari-Bold-subset.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+//@media screen and (max-width:769px){body{ font-size:25pt; color:aqua; }}
